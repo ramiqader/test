@@ -6,7 +6,7 @@ function Favourites() {
   
   const makeAPICall = async () => {
     try {
-      const response = await fetch('https://testback-ji4g.onrender.com/favourites', {mode:'cors'});
+      const response = await fetch('https://testback-ji4g.onrender.com/favourite', {mode:'cors'});
       const data = await response.json();
       setData(data);
       console.log({ data })
