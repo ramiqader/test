@@ -5,7 +5,7 @@ function Favourites() {
   const [data, setData] = useState('');
 
   useEffect(() => {
-    axios.get('/favourites')
+    axios.get('https://testback-ji4g.onrender.com/favourites')
       .then(response => {
         setData(response.data.message);
       })
