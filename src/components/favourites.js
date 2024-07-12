@@ -3,15 +3,20 @@ import axios from 'axios';
 
 function Favourites() {
   const [data, setData] = useState('');
-
+  
+  const makeAPICall = async () => {
+    try {
+      const response = await fetch('https://testback-ji4g.onrender.com/favourites', {mode:'cors'});
+      const data = await response.json();
+      setData(data);
+      console.log({ data })
+    }
+    catch (e) {
+      console.log(e)
+    }
+  }
   useEffect(() => {
-    axios.get('https://testback-ji4g.onrender.com/favourites')
-      .then(response => {
-        setData(response.data.message);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+   makeAPICall();
   }, []);
 
   return (
