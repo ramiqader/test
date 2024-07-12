@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "https://testback-ji4g.onrender.com",
   "dependencies": {
     "@headlessui/react": "^2.1.2",
     "@heroicons/react": "^1.0.6",
